@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutritionist, Contcat Us</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header class="mb-4">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg custom-bg shadow-1">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/images/Logo.svg" alt="logo">
+            </a>
+            <button class="navbar-toggler sec-bg-color" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#" tabindex="-1">Process</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <!--  -->
+
+    <div class="container">
+
+        <div class="my-4 box-bg-color  box-border rounded">
+            <div class="d-flex justify-content-center my-4">
+                <img src="./images/contactLogo.svg" width="70px" height="70px" alt="logo">
+            </div>
+
+            <div class="row gap-2 text-center my-4 py-4">
+                <h1 class="title">Contact Us</h1>
+                <p class="paragraph w-75 m-auto">We value your feedback, questions, and concerns at Nutritionist. Our dedicated team is here to assist you and provide
+                the support you need on your nutritional journey. Please don't hesitate to reach out to us using any of the following
+                contact methods</p>
+            </div>
+
+
+            <div class="d-lg-flex align-items-center justify-content-center gap-2 custom-bg p-4 rounded-bottom">
+                <div class="d-flex flex-column align-items-center justify-content-center gap-2 p-4  sec-bg-color custom-border rounded">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>hello@squareup.com</span>
+                </div>
+                
+                <div class="d-flex flex-column align-items-center justify-content-center gap-2 p-4 sec-bg-color custom-border rounded">
+                    <i class="fa-solid fa-phone"></i>
+                    <span class="text-light">+91 91813 23 2309</span>
+                </div>
+                
+                <div class="d-flex flex-column align-items-center justify-content-center gap-2 p-4 sec-bg-color custom-border rounded">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Mogadishu, Somalia</span>
+                </div>
+            </div>
+        </div>
+
+            <!-- form section -->
+
+            <div class="d-lg-flex gap-2 justify-content-between p-4 my-4 g-2 box-bg-color box-border rounded">
+
+                <div class="p-4 w-50 cust-form-width">
+
+                    <form id="authform" class="row">
+                        <!-- full name -->
+                        <div class="col-12 col-lg-6 my-2">
+                            <label for="FullName">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your Name">
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-12 col-lg-6 my-2">
+                            <label for="FullName">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+
+                        <!-- phone number -->
+                         <div class="col-12 my-2">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="number" id="phoneNumber" class="col-12 form-control" placeholder="Enter your Phone Number">
+                         </div>
+
+                        <!-- phone number -->
+                        <div class="col-12 row my-2">
+                            <label for="Message">Message</label>
+                            <textarea id="massage" class="col-12 form-control mx-2" rows="4" placeholder="Enter your massage">
+                            </textarea>
+                            <span class="col-12 fs-sm text-black-50 text-end">Max 250 Chars</span>
+                        </div>
+
+                        <span class="text-danger" id="error"></span>
+                        <span class="text-success" id="succesMassage"></span>
+                        <button class="btn form-control button-bg-color mt-2" type="submit">submit</button>
+                    </form>
+                </div>
+
+                <!-- left part -->
+                <div class="p-4 ml-2 w-50 cust-form-width">
+                <img src="./images/Map.svg" class="rounded-2" alt="">
+                <div class="col-12 row gap-2 justify-content-end">
+                    <i class="fa-brands fa-facebook social-media rounded mt-2"></i>
+                    <i class="fa-brands fa-twitter social-media rounded mt-2"></i>
+                    <i class="fa-brands fa-linkedin social-media rounded mt-2"></i>
+                </div>
+                </div>
+
+            </div>
+
+
+    </div>
+
+
+
+    <footer class="custom-bg mt-4 p-4">
+        <div class="container">
+            <div class="d-lg-flex align-items-center justify-content-between mb-4">
+                <div>
+                    <img src="/images/Logo.svg" alt="logo">
+                </div>
+                <!-- footer nav-->
+                <div class="d-flex">
+                    <a href="index.html" class="nav-item nav-link text-light">Home</a>
+                    <a href="about.html" class="nav-item nav-link text-light">About</a>
+                    <a href="#" class="nav-item nav-link text-light">Team</a>
+                    <a href="#" class="nav-item nav-link text-light">Process</a>
+                    <a href="contact.html" class="nav-item nav-link text-light">Contact</a>
+                </div>
+            </div>
+    
+            <div class="d-lg-flex text-center align-items-center justify-content-between sec-bg-color p-2 rounded">
+                <div class="d-lg-flex text-center gap-2">
+                    <div class="d-flex align-items-center justify-content-center gap-2 p-2 custom-border rounded">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>hello@squareup.com</span>
+                    </div>
+    
+                    <div class="d-flex align-items-center justify-content-center gap-2 p-2 custom-border rounded">
+                        <i class="fa-solid fa-phone"></i>
+                        <span class="text-light">+91 91813 23 2309</span>
+                    </div>
+    
+                    <div class="d-flex align-items-center justify-content-center gap-2 p-2 custom-border rounded">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Mogadishu, Somalia</span>
+                    </div>
+    
+                </div>
+    
+                <p class="mt-2 text-light">© 2025 Nutritionist. All rights reserved.</p>
+    
+            </div>
+        </div>
+    
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+        <script src="/auth.js"></script>
+</body>
+</html>
