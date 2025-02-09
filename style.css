@@ -90,6 +90,7 @@ section {
   background-color: #1a3129;
   color: #fff;
 }
+
 .pricing-text {
   color: #2c5446;
 }
@@ -110,7 +111,6 @@ section {
 }
 .accordion-question i {
   font-size: 1.3rem;
-  color: #1a3129;
   width: 45px;
   height: 45px;
   background-color: #1a3129;

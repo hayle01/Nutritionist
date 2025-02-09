@@ -34,7 +34,7 @@ const faqs = [
 
 console.log(faqs)
 
-const accordion = document.getElementById('accordion')
+const accordion = document.getElementById('accordion');
 
 faqs.map((faq) => {
     const accordionItem = document.createElement('div')
@@ -50,10 +50,9 @@ faqs.map((faq) => {
     const accordionQuestion = accordionItem.querySelector('.accordion-question');
     const icon = accordionQuestion.querySelector('i');
     
-    accordionQuestion.addEventListener('click', () => {
+    accordionQuestion.addEventListener('click', function() {
         const accordionAnswer = accordionItem.querySelector('.accordion-answer');
 
-        
         if(accordionAnswer.style.display === 'block'){
             accordionAnswer.style.display = 'none';
             icon.classList.remove('fa-xmark')
@@ -78,3 +77,73 @@ faqs.map((faq) => {
     })
     accordion.appendChild(accordionItem)
 })
+
+
+// pricing
+
+// Get references to the buttons
+  const monthlyBtn = document.getElementById('monthly');
+  const yearlyBtn = document.getElementById('yearly');
+
+  // Get references to the price elements and label spans
+  const basicPriceEl = document.getElementById('BasicPrice');
+  const premiumPriceEl = document.getElementById('premiumPrice');
+  const ultimatePriceEl = document.getElementById('ultimatePrice');
+
+  const basicLabel = document.getElementById('BasicLabel');
+  const premiumLabel = document.getElementById('PremiumLabel');
+  const ultimateLabel = document.getElementById('UltimateLabel');
+
+  // Original monthly prices
+  const monthlyPrices = {
+    basic: 49,
+    premium: 79,
+    ultimate: 99
+  };
+
+  // Discounted monthly prices (50% off)
+  const discountedMonthlyPrices = {
+    basic: Math.round(monthlyPrices.basic * 0.5),
+    premium: Math.round(monthlyPrices.premium * 0.5),
+    ultimate: Math.round(monthlyPrices.ultimate * 0.5)
+  };
+
+  console.log(discountedMonthlyPrices.basic);
+  console.log(discountedMonthlyPrices.basic * 12);
+
+  function updatePrices(isYearly) {
+    if (isYearly) {
+      basicPriceEl.textContent = '$' + (discountedMonthlyPrices.basic * 12);
+      premiumPriceEl.textContent = '$' + (discountedMonthlyPrices.premium * 12);
+      ultimatePriceEl.textContent = '$' + (discountedMonthlyPrices.ultimate * 12);
+      
+      basicLabel.textContent = '/year';
+      premiumLabel.textContent = '/year';
+      ultimateLabel.textContent = '/year';
+    } else {
+      basicPriceEl.textContent = '$' + monthlyPrices.basic;
+      premiumPriceEl.textContent = '$' + monthlyPrices.premium;
+      ultimatePriceEl.textContent = '$' + monthlyPrices.ultimate;
+      
+      basicLabel.textContent = '/month';
+      premiumLabel.textContent = '/month';
+      ultimateLabel.textContent = '/month';
+    }
+  }
+
+  // // Set initial state to monthly
+  updatePrices(false);
+
+  // Event listener for monthly button
+  monthlyBtn.addEventListener('click', () => {
+    updatePrices(false);
+    monthlyBtn.classList.add("custom-bg");
+    yearlyBtn.classList.remove("custom-bg");
+  });
+
+  // Event listener for yearly button
+  yearlyBtn.addEventListener('click', () => {
+    updatePrices(true);
+    yearlyBtn.classList.add("custom-bg");
+    monthlyBtn.classList.remove("custom-bg");
+  });
